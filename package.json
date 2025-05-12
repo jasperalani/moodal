@@ -1,0 +1,25 @@
+{
+  "name": "moodal",
+  "version": "1.0.0",
+  "description": "Javascript modal extension",
+  "homepage": "https://github.com/jasperalani/moodal#readme",
+  "bugs": {
+    "url": "https://github.com/jasperalani/moodal/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasperalani/moodal.git"
+  },
+  "license": "MIT",
+  "author": "Jasper Alani <jasperalani@gmail.com>",
+  "type": "commonjs",
+  "main": "src/moodal.ts",
+  "scripts": {
+    "watch-ts": "npx tsc -w",
+    "build-ts": "npx tsc",
+    "serve-dev": "npm run build-dev; cd dist; sudo php -S localhost:80",
+    "build-dev": "npm run clean; npm run html; npm run build-ts",
+    "clean": "rm -r dist/index.html; rm -rf dist/*",
+    "html": "cp src/index.html dist/index.html"
+  }
+}
