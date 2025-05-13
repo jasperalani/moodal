@@ -18,7 +18,7 @@
         
         }
         
-        .root {
+        .container {
             position: relative;
             width: 100%;
             min-height: 100vh;
@@ -28,7 +28,7 @@
             flex-direction: column;
         }
         
-        .descr {
+        .row {
             font-size: 18px;
             text-align: center;
             max-width: 600px;
@@ -111,16 +111,15 @@
             text-align: center;
         }
     </style>
-	{{/*  <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">  */}}
 </head>
-<body >
+<body>
 
-	<div class="root">
-		<div class="descr">
-			Demonstration of a modal window that is dynamically created the first time the "open" button is clicked. On subsequent openings, the window is hidden and shown thanks to the display property.
-		</div>
+	<div class="container">
+		<div class="row">
+            <div class="col">
+                Demonstration of a modal window that is dynamically created the first time the "open" button is clicked. On subsequent openings, the window is hidden and shown thanks to the display property.
+            </div>
+        </div>
 		<button class="btn modal__open">Open modal</button>
 	</div>
 
