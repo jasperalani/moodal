@@ -7,6 +7,29 @@
 
 When I refer to <i>JTS</i>, I mean <i>javascript and typescript</i>.
 
+## Usage Examples
+
+### Module (TypeScript or Bundler)
+
+```ts
+import MooDOM from "./MooDOM";
+
+const vdom = new MooDOM(document);
+console.log(vdom.fetch(document.querySelector(".col")!, { elementExistance: true }));
+```
+
+### Browser Global
+
+```ts
+<script src="MooDOM.js"></script>
+<script>
+
+  const dom = new MooDOM(document);
+  console.log(dom.fetch(document.querySelector(".col"), { elementExistance: true }));
+  
+</script>
+```
+
 ## features
 - semi-transparent background overlay (behind modal)
     - modal can be closed by clicking on the overlay
@@ -28,6 +51,15 @@ When I refer to <i>JTS</i>, I mean <i>javascript and typescript</i>.
     
 ## built from [cheatsnake/ModalWindow](https://github.com/cheatsnake/ModalWindow)
 
+## dev scripts
+```bash
+# watch *.ts files and auto-compile into /dist
+npm run watch-ts
+
+# deploy static files and start a php dev server in /dist
+npm run serve-dev
+```
+
 ## dev setup
 ```bash
 git clone https://github.com/jasperalani/moodal.git
@@ -38,4 +70,16 @@ npm install -g typescript
 # install ts locally
 npm install --save-dev typescript
 npx tsc --init
+```
+
+## Install test dependencies
+
+```bash
+npm i --save-dev babel ts-jest @jest/globals @types/jest
+```
+
+## Run test
+
+```bash
+npm run test
 ```

@@ -15,11 +15,22 @@
   "type": "commonjs",
   "main": "src/moodal.ts",
   "scripts": {
-    "watch-ts": "npx tsc -w",
-    "build-ts": "npx tsc",
-    "serve-dev": "npm run build-dev; cd dist; sudo php -S localhost:80",
-    "build-dev": "npm run clean; npm run html; npm run build-ts",
-    "clean": "rm -r dist/index.html; rm -rf dist/*",
-    "html": "cp src/index.html dist/index.html"
+    "test": "jest",
+    "serve": "rm -r dist; rm -r moodal.js; tsc; npx serve ."
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-typescript": "^7.27.1",
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.14",
+    "babel": "^5.8.38",
+    "jest": "^29.7.0",
+    "jsdom": "^26.1.0",
+    "ts-jest": "^29.3.2"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-node": "^10.9.2",
+    "undici-types": "^7.9.0"
   }
 }
